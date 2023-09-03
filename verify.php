@@ -1,4 +1,4 @@
-!<?php  
+<?php  
 if (isset($_POST['user'], $_POST['password'])) {
     $user = $_POST['user'];
     $password = $_POST['password'];
