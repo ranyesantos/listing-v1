@@ -1,6 +1,6 @@
 <?php 
-include_once 'includes/header.php';
-include_once 'action/db_connect.php';
+include_once '../includes/header.php';
+include_once '../action/db_connect.php';
 
 if(isset($_GET['id'])){
     $id = mysqli_escape_string($connect,$_GET['id']);
@@ -14,14 +14,14 @@ if(isset($_GET['id'])){
     </div>
 <div class="row">
     <div class="col s12 m4 push-m4">
-       <form action="action/update.php" method="POST">
+       <form action="../action/update.php" method="POST">
             <div class="input-field col s12">
                 <input type="text" name="prod" value="<?php echo $data['item'] ?>" required id="prod">
                 <label for="prod">Produto</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="text" required name="desc" value="<?php echo $data['descrição'] ?>" id="desc">
+                <textarea required name="desc" id="desc" class="materialize-textarea" type="text"><?php echo $data['item'] ?></textarea>
                 <label for="desc">Descrição</label>
             </div>
 
@@ -45,12 +45,12 @@ if(isset($_GET['id'])){
              Finalizar
             </button>
             <div class="right">
-                <a href="index.php" class="btn waves-effect waves-light orange right">Listagem</a>
+                <a href="../index.php" class="btn waves-effect waves-light orange right">Listagem</a>
             </div>
        </form>
     </div>
 </div>
 
 <?php 
-include_once 'includes/footer.php';
+include_once '../includes/footer.php';
 ?>

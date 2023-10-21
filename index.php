@@ -32,9 +32,12 @@ include_once 'action/db_connect.php';
                             <td><?php echo $data['item']?></td>
                             <td class="center-align"><?php echo "R$".number_format($data['valor'],2,",",".").""?></td>
 
+                            
+
                             <td class="right">
                                 <a href="#modal<?php echo $data['id'] ?>" class="red btn-floating btn-small waves-effect waves-light modal-trigger"><i class="material-icons">delete</i></a>
                             </td>
+                            
                             
                             <div id="modal<?php echo $data['id'];?>"class="modal">
                                 <div class="modal-content">
@@ -52,7 +55,11 @@ include_once 'action/db_connect.php';
                             </div>
 
                             <td class="right">
-                                <a href="edit.php?id=<?php echo $data['id'] ?>" class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+                                <a href="form-action/edit.php?id=<?php echo $data['id'] ?>" class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+                            </td>
+
+                            <td class="right">
+                                <a href="form-action/detail.php?id=<?php echo $data['id'] ?>" class="btn-floating btn-small waves-effect waves-light orange"><i class="material-icons">details</i></a>
                             </td>
                         </tr>
                 <?php
@@ -72,8 +79,9 @@ include_once 'action/db_connect.php';
      
         </table>
         <br>
-        <a href="add.php" class="btn waves-effect waves-light blue">Adicionar Produto</a>
-        <a href="complete.php" class="btn waves-effect waves-light orange right">Listagem Completa</a>
+        <div class="center-align">
+            <a href="form-action/add.php" class=" btn waves-effect waves-light blue">Adicionar Produto</a>
+        </div>
     </div>
 </div>
 

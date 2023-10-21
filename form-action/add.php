@@ -1,19 +1,19 @@
 <?php 
-include_once 'includes/header.php';
+include_once '../includes/header.php';
 ?>
     <div class="center-align" >
         <h3>Adicionar Produto</h3>
     </div>
 <div class="row">
     <div class="col s12 m4 push-m4">
-       <form action="action/create.php" method="POST">
+       <form action="../action/create.php" method="POST">
             <div class="input-field col s12">
                 <input type="text" name="prod" required id="prod">
                 <label for="prod">Produto</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="text" required name="desc" id="desc">
+                <textarea required name="desc" id="desc" class="materialize-textarea" type="text"></textarea>
                 <label for="desc">Descrição</label>
             </div>
 
@@ -36,12 +36,12 @@ include_once 'includes/header.php';
              Finalizar
             </button>
             <div class="right">
-                <a href="index.php" class="btn waves-effect waves-light orange right">Listagem</a>
+                <a href="../index.php" class="btn waves-effect waves-light orange right">Listagem</a>
             </div>
        </form>
     </div>
 </div>
 
 <?php 
-include_once 'includes/footer.php';
+include_once '../includes/footer.php';
 ?>
