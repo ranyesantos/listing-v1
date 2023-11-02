@@ -26,7 +26,7 @@ if(isset($_GET['id'])){
             </div>
 
             <div class="input-field col s12">
-                <input type="number" required name="val" value="<?php echo $data['valor'] ?>" id="val">
+                <input type="number" required name="val" step=".01" value="<?php echo $data['valor'] ?>" id="val">
                 <label for="val">Valor(R$)</label>
             </div>
             
